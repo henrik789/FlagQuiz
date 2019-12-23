@@ -76,11 +76,17 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="207" height="409"/>
                                                 <color key="backgroundColor" red="0.59999999999999998" green="0.2901960784" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="landOne:" destination="cOq-au-2od" eventType="touchUpInside" id="GWB-7x-Dey"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtZ-jQ-hyP">
                                                 <rect key="frame" x="207" y="0.0" width="207" height="409"/>
                                                 <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="landTwo:" destination="cOq-au-2od" eventType="touchUpInside" id="l4W-EV-lxy"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -91,11 +97,17 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="207" height="409"/>
                                                 <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="landThree:" destination="cOq-au-2od" eventType="touchUpInside" id="Yo0-gQ-Syz"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uzw-t7-YqJ">
                                                 <rect key="frame" x="207" y="0.0" width="207" height="409"/>
                                                 <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="landFour:" destination="cOq-au-2od" eventType="touchUpInside" id="CWN-4S-0Ry"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -116,7 +128,11 @@
                                 <color key="backgroundColor" cyan="0.0" magenta="0.52970126799999995" yellow="0.31905539150000001" black="8.346814138e-05" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="64" translatesAutoresizingMaskIntoConstraints="NO" id="MtZ-ao-kA2">
-                                <rect key="frame" x="100" y="5" width="214" height="896"/>
+                                <rect key="frame" x="143" y="389" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="Jlj-2x-6tP"/>
+                                    <constraint firstAttribute="height" constant="128" id="ON9-s8-0if"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -126,14 +142,17 @@
                             <constraint firstItem="MtZ-ao-kA2" firstAttribute="centerY" secondItem="ZT9-dj-9dN" secondAttribute="centerY" id="GH1-4l-aXf"/>
                             <constraint firstItem="MtZ-ao-kA2" firstAttribute="centerX" secondItem="ZT9-dj-9dN" secondAttribute="centerX" id="TxE-yG-4U7"/>
                             <constraint firstItem="dga-ak-BFe" firstAttribute="top" secondItem="ZT9-dj-9dN" secondAttribute="top" id="bS3-hd-E64"/>
-                            <constraint firstItem="MtZ-ao-kA2" firstAttribute="height" secondItem="FzM-5b-Q7n" secondAttribute="height" id="drr-ea-lzA"/>
-                            <constraint firstItem="MtZ-ao-kA2" firstAttribute="width" secondItem="FzM-5b-Q7n" secondAttribute="width" constant="-200" id="s6z-aD-bh3"/>
                             <constraint firstItem="ZT9-dj-9dN" firstAttribute="trailing" secondItem="dga-ak-BFe" secondAttribute="trailing" id="yHE-lp-zhv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZT9-dj-9dN"/>
                     </view>
                     <connections>
                         <outlet property="flagImage" destination="MtZ-ao-kA2" id="g0b-Xn-nPY"/>
+                        <outlet property="landFour" destination="Uzw-t7-YqJ" id="gk0-3W-4T2"/>
+                        <outlet property="landOne" destination="VqR-dR-5fI" id="pgG-Rh-ETs"/>
+                        <outlet property="landThre" destination="X2f-zI-Rcf" id="pj8-J5-rlz"/>
+                        <outlet property="landTwo" destination="YtZ-jQ-hyP" id="gTG-BG-Jvx"/>
+                        <outlet property="pointsLabel" destination="DhG-hy-N4w" id="lhx-rL-zRX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hE4-aG-Kur" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -18,5 +18,55 @@ class GetFlags {
         completion(urlArray)
     }
     
+    func buildFlagArray() -> String {
+        let randomNumber = Int.random(in: 0..<flagArray.count)
+        let randomFlag = flagArray[randomNumber]
+        return randomFlag
+    }
+    
+    func checkCountry(landCode: String) -> String {
+        switch landCode {
+        case "AD":
+            return "Andorra"
+        case "AE":
+            return "United Arab Emirates"
+        case "AF":
+            return "Afghanistan"
+        case "AG":
+            return "Antigua and Barbuda"
+        case "AI":
+            return "Anguilla"
+        case "AL":
+            return "Albania"
+        case "AM":
+            return "Armenia"
+        case "AN":
+            return "Netherlands Antilles"
+        case "AO":
+            return "Angola"
+        case "AQ":
+            return "Antarctica"
+        case "AR":
+            return "Argentina"
+        case "AS":
+            return "American Samoa"
+        case "AT":
+            return "Austria"
+        case "AU":
+            return "Australia"
+        case "AW":
+            return "Aruba"
+        case "AX":
+            return "Åland"
+        case "AZ":
+            return "Azerbadjan"
+        case "BA":
+            return "Bosnia and Herzegovina"
+
+        default:
+            return "Sweden"
+        }
+    }
+    
     
 }
