@@ -10,7 +10,6 @@ import UIKit
 
 class FlagViewController: UIViewController {
 
-    
     var getFlags = GetFlags()
     @IBOutlet weak var flagImage: UIImageView!
     
@@ -23,15 +22,19 @@ class FlagViewController: UIViewController {
     }
     
     func downloadFlagImage() {
-        let url = URL(string: "https://www.countryflags.io/AL/flat/64.png")
-        //        flagImage.kf.indicatorType = .activity
+        let url = URL(string: "https://www.countryflags.io/\(buildFlagArray())/flat/64.png")
+                flagImage.kf.indicatorType = .activity
         flagImage.kf.setImage(with: url)
-        //        flagImage.layer.cornerRadius = 14
-        //        flagImage.layer.borderColor = UIColor(named: "Whiteish")?.cgColor
-        //        flagImage.layer.borderWidth = 2
-        //        flagImage.clipsToBounds = true
+//                flagImage.layer.cornerRadius = 14
+//                flagImage.layer.borderWidth = 2
+//                flagImage.clipsToBounds = true
         
     }
 
-
+    func buildFlagArray() -> String {
+        let randomNumber = Int.random(in: 0..<getFlags.flagArray.count)
+        let randomFlag = getFlags.flagArray[randomNumber]
+        return randomFlag
+    }
+    
 }
