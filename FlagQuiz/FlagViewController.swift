@@ -14,27 +14,33 @@ class FlagViewController: UIViewController {
     var givenLand = String()
     var landFullname = String()
     var getFlags = GetFlags()
+    var points = 0
+    var answer = String()
     @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var landOne: UIButton!
     @IBOutlet weak var landTwo: UIButton!
     @IBOutlet weak var landThre: UIButton!
     @IBOutlet weak var landFour: UIButton!
+    
     @IBAction func landOne(_ sender: Any) {
-        
+        let buttonOne = sender
+        evaluate(button: buttonOne as! UIButton)
     }
     @IBAction func landTwo(_ sender: Any) {
-        
+        let buttonTwo = sender
+        evaluate(button: buttonTwo as! UIButton)
     }
     @IBAction func landThree(_ sender: Any) {
-        
+        let buttonThree = sender
+        evaluate(button: buttonThree as! UIButton)
     }
     @IBAction func landFour(_ sender: Any) {
-        
+        let buttonFour = sender
+        evaluate(button: buttonFour as! UIButton)
     }
     @IBAction func newFlag(_ sender: Any) {
         givenLand = getFlags.buildFlagArray()
         flagImage.image = UIImage(named: givenLand + ".png")
-        print(givenLand)
         setCountryName(land: givenLand)
     }
     @IBOutlet weak var flagImage: UIImageView!
@@ -46,29 +52,28 @@ class FlagViewController: UIViewController {
         getFlags.buildArray()
         
         
-        
     }
     
     
     func setCountryName(land: String) {
-        let answer = getFlags.checkCountry(landCode: land)
+        answer = getFlags.checkCountry(landCode: land)
         let randomNumber = Int.random(in: 1...4)
         if randomNumber == 1 {
             landOne.setTitle(answer, for: .normal)
-            setOtherNames(correctAnswer: answer, fake1: landTwo, fake2: landThre, fake3: landFour)
+            setOtherNames(fake1: landTwo, fake2: landThre, fake3: landFour)
         } else if randomNumber == 2 {
             landTwo.setTitle(answer, for: .normal)
-            setOtherNames(correctAnswer: answer, fake1: landOne, fake2: landThre, fake3: landFour)
+            setOtherNames(fake1: landOne, fake2: landThre, fake3: landFour)
         } else if randomNumber == 3 {
             landThre.setTitle(answer, for: .normal)
-            setOtherNames(correctAnswer: answer, fake1: landOne, fake2: landTwo, fake3: landFour)
+            setOtherNames(fake1: landOne, fake2: landTwo, fake3: landFour)
         } else if randomNumber == 4 {
             landFour.setTitle(answer, for: .normal)
-            setOtherNames(correctAnswer: answer, fake1: landOne, fake2: landTwo, fake3: landThre)
+            setOtherNames(fake1: landOne, fake2: landTwo, fake3: landThre)
         }
     }
     
-    func setOtherNames(correctAnswer: String, fake1: UIButton, fake2: UIButton, fake3: UIButton) {
+    func setOtherNames(fake1: UIButton, fake2: UIButton, fake3: UIButton) {
         
         let land1 = getFlags.buildFlagArray1()
         let land2 = getFlags.buildFlagArray2()
@@ -81,7 +86,15 @@ class FlagViewController: UIViewController {
         let fakeAnswer3 = getFlags.checkCountry(landCode: land3)
         fake3.setTitle(fakeAnswer3, for:  .normal)
         
-        
+    }
+    
+    func evaluate(button: UIButton) {
+        if button.currentTitle == answer {
+            points = points + 1
+            pointsLabel.text = "Points: \(points)"
+        }
+        pointsLabel.text = "Points: \(points)"
+        newFlag((Any).self)
     }
     
 }
