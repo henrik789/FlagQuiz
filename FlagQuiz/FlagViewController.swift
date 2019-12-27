@@ -43,7 +43,7 @@ class FlagViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        getFlags.buildArray()
         
         
         

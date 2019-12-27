@@ -8,19 +8,19 @@ class GetFlags {
 //    var urlArray: [URL] = []
 //    let flagArray = ["AD", "AF", "AG","AL", "AO", "BS"]
     
-
-
-    
-    func buildFlagArray() -> String {
-        
+    func buildArray() {
         let docPath = Bundle.main.resourcePath! + "/" + "Countries"
         let fileManager = FileManager.default
         let filesFromBundle = try! fileManager.contentsOfDirectory(atPath: docPath)
         pictures = filesFromBundle
+    }
+
+    
+    func buildFlagArray() -> String {
+        
         let randomNumber = Int.random(in: 0..<pictures.count)
         let randomFlag = pictures[randomNumber]
         let fileName = randomFlag
-        print(pictures.count)
         var components = fileName.components(separatedBy: ".")
         if components.count > 1 { // If there is a file extension
             components.removeLast()
@@ -30,11 +30,7 @@ class GetFlags {
     }
     
     func buildFlagArray1() -> String {
-        
-        let docPath = Bundle.main.resourcePath! + "/" + "Countries"
-        let fileManager = FileManager.default
-        let filesFromBundle = try! fileManager.contentsOfDirectory(atPath: docPath)
-        pictures = filesFromBundle
+
         let randomNumber = Int.random(in: 0..<11)
         let randomFlag = pictures[randomNumber]
         let fileName = randomFlag
@@ -47,11 +43,7 @@ class GetFlags {
     }
     
     func buildFlagArray2() -> String {
-        
-        let docPath = Bundle.main.resourcePath! + "/" + "Countries"
-        let fileManager = FileManager.default
-        let filesFromBundle = try! fileManager.contentsOfDirectory(atPath: docPath)
-        pictures = filesFromBundle
+
         let randomNumber = Int.random(in: 11..<21)
         let randomFlag = pictures[randomNumber]
         let fileName = randomFlag
@@ -64,11 +56,7 @@ class GetFlags {
     }
     
     func buildFlagArray3() -> String {
-        
-        let docPath = Bundle.main.resourcePath! + "/" + "Countries"
-        let fileManager = FileManager.default
-        let filesFromBundle = try! fileManager.contentsOfDirectory(atPath: docPath)
-        pictures = filesFromBundle
+
         let randomNumber = Int.random(in: 21..<35)
         let randomFlag = pictures[randomNumber]
         let fileName = randomFlag
@@ -98,24 +86,24 @@ class GetFlags {
             return "Bahamas"
         case "dz":
             return "Algeria"
-//        case "AQ":
-//            return "Antarctica"
-//        case "AR":
-//            return "Argentina"
-//        case "AS":
-//            return "American Samoa"
-//        case "AT":
-//            return "Austria"
-//        case "AU":
-//            return "Australia"
-//        case "AW":
-//            return "Aruba"
-//        case "AX":
-//            return "Åland"
-//        case "AZ":
-//            return "Azerbadjan"
-//        case "BA":
-//            return "Bosnia and Herzegovina"
+        case "am":
+            return "Armenia"
+        case "ar":
+            return "Argentina"
+        case "at":
+            return "Austria"
+        case "au":
+            return "Australia"
+        case "az":
+            return "Azerbaijan"
+        case "ba":
+            return "Bosnia and Herzegovina"
+        case "bb":
+            return "Barbados"
+        case "bd":
+            return "Bangladesh"
+        case "be":
+            return ""
 
         default:
             return "Sweden"
