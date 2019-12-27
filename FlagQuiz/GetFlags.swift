@@ -4,41 +4,100 @@ import Kingfisher
 
 class GetFlags {
     
-
-    var urlArray: [URL] = []
-    let flagArray = ["AD", "AF", "AG","AL", "AO", "BS"]
+    var pictures = [String]()
+//    var urlArray: [URL] = []
+//    let flagArray = ["AD", "AF", "AG","AL", "AO", "BS"]
     
-//    func getAllFlags(completion: @escaping ([URL]) -> Void){
-//        for index in 0..<flagArray.count {
-//            let land = flagArray[index]
-//            let imageUrl = URL(string: "https://www.countryflags.io/\(land)/flat/64.png")
-//            urlArray.append(imageUrl!)
-//        }
-//        completion(urlArray)
-//    }
+
+
     
     func buildFlagArray() -> String {
-        let randomNumber = Int.random(in: 0..<flagArray.count)
-        let randomFlag = flagArray[randomNumber]
-        return randomFlag
+        
+        let docPath = Bundle.main.resourcePath! + "/" + "Countries"
+        let fileManager = FileManager.default
+        let filesFromBundle = try! fileManager.contentsOfDirectory(atPath: docPath)
+        pictures = filesFromBundle
+        let randomNumber = Int.random(in: 0..<pictures.count)
+        let randomFlag = pictures[randomNumber]
+        let fileName = randomFlag
+        print(pictures.count)
+        var components = fileName.components(separatedBy: ".")
+        if components.count > 1 { // If there is a file extension
+            components.removeLast()
+            return components.joined(separator: ".")
+        } 
+        return fileName
     }
+    
+    func buildFlagArray1() -> String {
+        
+        let docPath = Bundle.main.resourcePath! + "/" + "Countries"
+        let fileManager = FileManager.default
+        let filesFromBundle = try! fileManager.contentsOfDirectory(atPath: docPath)
+        pictures = filesFromBundle
+        let randomNumber = Int.random(in: 0..<11)
+        let randomFlag = pictures[randomNumber]
+        let fileName = randomFlag
+        var components = fileName.components(separatedBy: ".")
+        if components.count > 1 { // If there is a file extension
+            components.removeLast()
+            return components.joined(separator: ".")
+        }
+        return fileName
+    }
+    
+    func buildFlagArray2() -> String {
+        
+        let docPath = Bundle.main.resourcePath! + "/" + "Countries"
+        let fileManager = FileManager.default
+        let filesFromBundle = try! fileManager.contentsOfDirectory(atPath: docPath)
+        pictures = filesFromBundle
+        let randomNumber = Int.random(in: 11..<21)
+        let randomFlag = pictures[randomNumber]
+        let fileName = randomFlag
+        var components = fileName.components(separatedBy: ".")
+        if components.count > 1 { // If there is a file extension
+            components.removeLast()
+            return components.joined(separator: ".")
+        }
+        return fileName
+    }
+    
+    func buildFlagArray3() -> String {
+        
+        let docPath = Bundle.main.resourcePath! + "/" + "Countries"
+        let fileManager = FileManager.default
+        let filesFromBundle = try! fileManager.contentsOfDirectory(atPath: docPath)
+        pictures = filesFromBundle
+        let randomNumber = Int.random(in: 21..<35)
+        let randomFlag = pictures[randomNumber]
+        let fileName = randomFlag
+        var components = fileName.components(separatedBy: ".")
+        if components.count > 1 { // If there is a file extension
+            components.removeLast()
+            return components.joined(separator: ".")
+        }
+        return fileName
+    }
+    
+    
     
     func checkCountry(landCode: String) -> String {
         switch landCode {
-        case "AD":
+        case "ad":
             return "Andorra"
-        case "AF":
+        case "af":
             return "Afghanistan"
-        case "AG":
+        case "ag":
             return "Antigua and Barbuda"
-        case "AL":
+        case "al":
             return "Albania"
-        case "AO":
+        case "ao":
             return "Angola"
-        case "BS":
+        case "bs":
             return "Bahamas"
-//        case "AO":
-//            return "Angola"
+        case "dz":
+            return "Algeria"
 //        case "AQ":
 //            return "Antarctica"
 //        case "AR":

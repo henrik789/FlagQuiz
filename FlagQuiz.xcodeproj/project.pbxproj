@@ -15,7 +15,7 @@
 		AF73B34023AD351D006E0BDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF73B33E23AD351D006E0BDC /* LaunchScreen.storyboard */; };
 		AF73B34823AD7FCE006E0BDC /* GetFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF73B34723AD7FCE006E0BDC /* GetFlags.swift */; };
 		AFCB59F423B0B53800E69A14 /* FlagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCB59F323B0B53800E69A14 /* FlagViewController.swift */; };
-		AFE3962823B6656700C33F34 /* Countries in Resources */ = {isa = PBXBuildFile; fileRef = AFE3962723B6656700C33F34 /* Countries */; };
+		AFE3962A23B6ABEA00C33F34 /* Countries in Resources */ = {isa = PBXBuildFile; fileRef = AFE3962923B6ABEA00C33F34 /* Countries */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,7 @@
 		AF73B34123AD351D006E0BDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF73B34723AD7FCE006E0BDC /* GetFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFlags.swift; sourceTree = "<group>"; };
 		AFCB59F323B0B53800E69A14 /* FlagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagViewController.swift; sourceTree = "<group>"; };
-		AFE3962723B6656700C33F34 /* Countries */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Countries; sourceTree = "<group>"; };
+		AFE3962923B6ABEA00C33F34 /* Countries */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Countries; sourceTree = "<group>"; };
 		DB16D7D32B34014671EBF125 /* Pods-FlagQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlagQuiz.debug.xcconfig"; path = "Target Support Files/Pods-FlagQuiz/Pods-FlagQuiz.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,8 +68,8 @@
 			isa = PBXGroup;
 			children = (
 				AF73B33523AD351C006E0BDC /* AppDelegate.swift */,
-				AFE3962723B6656700C33F34 /* Countries */,
 				AF73B33723AD351C006E0BDC /* ViewController.swift */,
+				AFE3962923B6ABEA00C33F34 /* Countries */,
 				AFCB59F323B0B53800E69A14 /* FlagViewController.swift */,
 				AF73B34723AD7FCE006E0BDC /* GetFlags.swift */,
 				AF73B33923AD351C006E0BDC /* Main.storyboard */,
@@ -158,7 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF73B34023AD351D006E0BDC /* LaunchScreen.storyboard in Resources */,
-				AFE3962823B6656700C33F34 /* Countries in Resources */,
+				AFE3962A23B6ABEA00C33F34 /* Countries in Resources */,
 				AF73B33D23AD351D006E0BDC /* Assets.xcassets in Resources */,
 				AF73B33B23AD351C006E0BDC /* Main.storyboard in Resources */,
 			);
