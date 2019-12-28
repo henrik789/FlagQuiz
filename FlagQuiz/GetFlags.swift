@@ -12,6 +12,7 @@ class GetFlags {
         let fileManager = FileManager.default
         let filesFromBundle = try! fileManager.contentsOfDirectory(atPath: docPath)
         pictures = filesFromBundle
+        print(pictures.count)
     }
     
     
@@ -142,7 +143,7 @@ class GetFlags {
         case "ca":
             return "Canada"
         case "cf":
-            return "The Central African Republic"
+            return "The Central \nAfrican Republic"
         case "cl":
             return "Chile"
         case "cm":
@@ -210,9 +211,9 @@ class GetFlags {
         case "dj":
             return "Djibouti"
         case "dk":
-            return "Denamrk"
+            return "Denmark"
         case "cd":
-            return "The Democratic Republic of Congo"
+            return "The Democratic \nRepublic of Congo"
         case "cz":
             return "The Czech Republic"
         case "cy":

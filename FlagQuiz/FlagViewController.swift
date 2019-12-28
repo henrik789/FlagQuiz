@@ -15,7 +15,10 @@ class FlagViewController: UIViewController {
     var landFullname = String()
     var getFlags = GetFlags()
     var points = 0
+    var flagCounter = 0
     var answer = String()
+    @IBOutlet weak var flagLabel: UILabel!
+    
     @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var landOne: UIButton!
     @IBOutlet weak var landTwo: UIButton!
@@ -39,9 +42,11 @@ class FlagViewController: UIViewController {
         evaluate(button: buttonFour as! UIButton)
     }
     @IBAction func newFlag(_ sender: Any) {
+        flagCounter = flagCounter + 1
         givenLand = getFlags.buildFlagArray()
         flagImage.image = UIImage(named: givenLand + ".png")
         setCountryName(land: givenLand)
+        flagLabel.text = "Flags: \(flagCounter) / \(getFlags.pictures.count)"
     }
     @IBOutlet weak var flagImage: UIImageView!
     
@@ -50,7 +55,8 @@ class FlagViewController: UIViewController {
         super.viewDidLoad()
         
         getFlags.buildArray()
-        
+//        flagImage.layer.borderColor = UIColor.black.cgColor
+//        flagImage.layer.borderWidth = 1
         
     }
     
