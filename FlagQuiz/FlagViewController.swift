@@ -46,7 +46,7 @@ class FlagViewController: UIViewController {
         givenLand = getFlags.buildFlagArray()
         flagImage.image = UIImage(named: givenLand + ".png")
         setCountryName(land: givenLand)
-        flagLabel.text = "Flags: \(flagCounter) / \(getFlags.pictures.count)"
+        flagLabel.text = "Flags: \(flagCounter) / \(getFlags.totalFlags.count + 1)"
     }
     @IBOutlet weak var flagImage: UIImageView!
     
@@ -95,12 +95,20 @@ class FlagViewController: UIViewController {
     }
     
     func evaluate(button: UIButton) {
+        if flagCounter <= getFlags.totalFlags.count {
         if button.currentTitle == answer {
             points = points + 1
             pointsLabel.text = "Points: \(points)"
         }
         pointsLabel.text = "Points: \(points)"
         newFlag((Any).self)
+        }else {
+            startOver()
+        }
+    }
+    
+    func startOver() {
+        pointsLabel.text = "All flags done"
     }
     
 }
