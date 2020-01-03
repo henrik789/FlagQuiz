@@ -53,6 +53,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="startButton" destination="cIa-H9-bCg" id="RUR-tD-zlq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -66,155 +69,161 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map-3483539_1920" translatesAutoresizingMaskIntoConstraints="NO" id="mqo-iy-zfg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map-3483539_1920" translatesAutoresizingMaskIntoConstraints="NO" id="m3Y-s9-yVG">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                             </imageView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qs4-WA-5Iq">
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ym9-dH-gvI">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dPb-9W-AZs">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OBQ-df-NR9">
                                     <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzC-rv-HCZ">
-                                <rect key="frame" x="0.0" y="0.0" width="896" height="100"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Rxg-bl-7oY">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="384"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XO1-AV-NbE">
-                                        <rect key="frame" x="50" y="0.0" width="796" height="100"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzC-rv-HCZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="896" height="62"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEH-la-Fmf">
-                                                <rect key="frame" x="0.0" y="0.0" width="265.5" height="100"/>
-                                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="32"/>
-                                                <state key="normal" title="New Flag">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="newFlag:" destination="cOq-au-2od" eventType="touchUpInside" id="uad-fL-GdV"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flags:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wr9-6f-i3d">
-                                                <rect key="frame" x="265.5" y="0.0" width="265" height="100"/>
-                                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="32"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DhG-hy-N4w">
-                                                <rect key="frame" x="530.5" y="0.0" width="265.5" height="100"/>
-                                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="28"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="XO1-AV-NbE" firstAttribute="centerX" secondItem="bzC-rv-HCZ" secondAttribute="centerX" id="5F8-MR-kIq"/>
-                                    <constraint firstItem="XO1-AV-NbE" firstAttribute="centerY" secondItem="bzC-rv-HCZ" secondAttribute="centerY" id="AGH-CO-YxA"/>
-                                    <constraint firstItem="XO1-AV-NbE" firstAttribute="width" secondItem="bzC-rv-HCZ" secondAttribute="width" constant="-100" id="OSU-Jz-lMI"/>
-                                    <constraint firstAttribute="height" constant="100" id="R1B-QK-Cdz"/>
-                                    <constraint firstItem="XO1-AV-NbE" firstAttribute="height" secondItem="bzC-rv-HCZ" secondAttribute="height" id="dFi-aT-ORZ"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UnT-bw-Ou7">
-                                <rect key="frame" x="0.0" y="100" width="896" height="314"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="MhD-nM-x0a">
-                                        <rect key="frame" x="0.0" y="0.0" width="896" height="314"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="pgf-Zi-8l8">
-                                                <rect key="frame" x="0.0" y="0.0" width="298.5" height="314"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XO1-AV-NbE">
+                                                <rect key="frame" x="0.0" y="2" width="896" height="58"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="VqR-dR-5fI">
-                                                        <rect key="frame" x="0.0" y="0.0" width="298.5" height="132"/>
-                                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="22"/>
-                                                        <state key="normal" title="Button">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEH-la-Fmf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="224" height="58"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="28"/>
+                                                        <state key="normal" title="New Flag">
                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="landOne:" destination="cOq-au-2od" eventType="touchUpInside" id="GWB-7x-Dey"/>
+                                                            <action selector="newFlag:" destination="cOq-au-2od" eventType="touchUpInside" id="uad-fL-GdV"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="YtZ-jQ-hyP">
-                                                        <rect key="frame" x="0.0" y="182" width="298.5" height="132"/>
-                                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="22"/>
-                                                        <state key="normal" title="Button">
-                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="landTwo:" destination="cOq-au-2od" eventType="touchUpInside" id="l4W-EV-lxy"/>
-                                                        </connections>
-                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flags:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wr9-6f-i3d">
+                                                        <rect key="frame" x="224" y="0.0" width="224" height="58"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DhG-hy-N4w">
+                                                        <rect key="frame" x="448" y="0.0" width="224" height="58"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globe_white" translatesAutoresizingMaskIntoConstraints="NO" id="k4R-a8-rx4">
+                                                        <rect key="frame" x="672" y="0.0" width="224" height="58"/>
+                                                    </imageView>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="VqR-dR-5fI" firstAttribute="width" secondItem="pgf-Zi-8l8" secondAttribute="width" id="3ly-u6-kx7"/>
-                                                    <constraint firstItem="YtZ-jQ-hyP" firstAttribute="width" secondItem="pgf-Zi-8l8" secondAttribute="width" id="O4n-P5-0pt"/>
-                                                </constraints>
                                             </stackView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cv.png" translatesAutoresizingMaskIntoConstraints="NO" id="MtZ-ao-kA2">
-                                                <rect key="frame" x="298.5" y="0.0" width="299" height="314"/>
-                                            </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="uRl-n7-jic">
-                                                <rect key="frame" x="597.5" y="0.0" width="298.5" height="314"/>
+                                        </subviews>
+                                        <color key="backgroundColor" cyan="0.0" magenta="0.52970126799999995" yellow="0.31905539150000001" black="8.346814138e-05" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="XO1-AV-NbE" firstAttribute="centerX" secondItem="bzC-rv-HCZ" secondAttribute="centerX" id="5F8-MR-kIq"/>
+                                            <constraint firstItem="XO1-AV-NbE" firstAttribute="centerY" secondItem="bzC-rv-HCZ" secondAttribute="centerY" id="AGH-CO-YxA"/>
+                                            <constraint firstItem="XO1-AV-NbE" firstAttribute="width" secondItem="bzC-rv-HCZ" secondAttribute="width" id="OSU-Jz-lMI"/>
+                                            <constraint firstItem="XO1-AV-NbE" firstAttribute="height" secondItem="bzC-rv-HCZ" secondAttribute="height" constant="-4" id="dFi-aT-ORZ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X5x-hU-38c">
+                                        <rect key="frame" x="40" y="77" width="816" height="89"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="9kT-le-bI1">
+                                                <rect key="frame" x="0.0" y="0.0" width="816" height="89"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="X2f-zI-Rcf">
-                                                        <rect key="frame" x="0.0" y="0.0" width="298.5" height="132"/>
-                                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="22"/>
-                                                        <state key="normal" title="Button">
-                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="landThree:" destination="cOq-au-2od" eventType="touchUpInside" id="Yo0-gQ-Syz"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Uzw-t7-YqJ">
-                                                        <rect key="frame" x="0.0" y="182" width="298.5" height="132"/>
-                                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="22"/>
-                                                        <state key="normal" title="Button">
-                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="landFour:" destination="cOq-au-2od" eventType="touchUpInside" id="CWN-4S-0Ry"/>
-                                                        </connections>
-                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="g30-5r-HCG">
+                                                        <rect key="frame" x="0.0" y="0.0" width="816" height="37"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="VqR-dR-5fI">
+                                                                <rect key="frame" x="0.0" y="0.0" width="403" height="37"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="18"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="landOne:" destination="cOq-au-2od" eventType="touchUpInside" id="GWB-7x-Dey"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="YtZ-jQ-hyP">
+                                                                <rect key="frame" x="413" y="0.0" width="403" height="37"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="18"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="landTwo:" destination="cOq-au-2od" eventType="touchUpInside" id="l4W-EV-lxy"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pgf-Zi-8l8">
+                                                        <rect key="frame" x="0.0" y="52" width="816" height="37"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="X2f-zI-Rcf">
+                                                                <rect key="frame" x="0.0" y="0.0" width="403" height="37"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="18"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="landThree:" destination="cOq-au-2od" eventType="touchUpInside" id="Yo0-gQ-Syz"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Uzw-t7-YqJ">
+                                                                <rect key="frame" x="413" y="0.0" width="403" height="37"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="18"/>
+                                                                <state key="normal" title="Button">
+                                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="landFour:" destination="cOq-au-2od" eventType="touchUpInside" id="CWN-4S-0Ry"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </stackView>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="X2f-zI-Rcf" firstAttribute="width" secondItem="uRl-n7-jic" secondAttribute="width" id="6h5-TR-hSN"/>
-                                                    <constraint firstItem="Uzw-t7-YqJ" firstAttribute="width" secondItem="uRl-n7-jic" secondAttribute="width" id="v0B-VK-pnA"/>
-                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="pgf-Zi-8l8" firstAttribute="height" secondItem="MhD-nM-x0a" secondAttribute="height" id="ZdX-gK-dkb"/>
-                                            <constraint firstItem="uRl-n7-jic" firstAttribute="height" secondItem="MhD-nM-x0a" secondAttribute="height" id="kgo-za-ArO"/>
+                                            <constraint firstAttribute="trailing" secondItem="9kT-le-bI1" secondAttribute="trailing" id="8Hi-8c-Khw"/>
+                                            <constraint firstItem="9kT-le-bI1" firstAttribute="width" secondItem="X5x-hU-38c" secondAttribute="width" id="Dpq-Xv-nGp"/>
+                                            <constraint firstItem="9kT-le-bI1" firstAttribute="leading" secondItem="X5x-hU-38c" secondAttribute="leading" id="bpL-mc-jRt"/>
+                                            <constraint firstItem="g30-5r-HCG" firstAttribute="width" secondItem="X5x-hU-38c" secondAttribute="width" id="cS7-x3-3au"/>
+                                            <constraint firstAttribute="bottom" secondItem="9kT-le-bI1" secondAttribute="bottom" id="cmN-ym-DJO"/>
+                                            <constraint firstItem="9kT-le-bI1" firstAttribute="top" secondItem="X5x-hU-38c" secondAttribute="top" id="w4Q-FC-7Aw"/>
+                                            <constraint firstItem="pgf-Zi-8l8" firstAttribute="width" secondItem="X5x-hU-38c" secondAttribute="width" id="xLc-AI-NMI"/>
                                         </constraints>
-                                    </stackView>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cv.png" translatesAutoresizingMaskIntoConstraints="NO" id="MtZ-ao-kA2">
+                                        <rect key="frame" x="158" y="181" width="580" height="203"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="MhD-nM-x0a" firstAttribute="height" secondItem="UnT-bw-Ou7" secondAttribute="height" id="g9h-jI-UH3"/>
-                                    <constraint firstItem="MhD-nM-x0a" firstAttribute="leading" secondItem="UnT-bw-Ou7" secondAttribute="leading" id="h8v-gG-Iy5"/>
-                                    <constraint firstItem="MhD-nM-x0a" firstAttribute="width" secondItem="UnT-bw-Ou7" secondAttribute="width" id="rkx-0E-EG7"/>
-                                    <constraint firstItem="MhD-nM-x0a" firstAttribute="top" secondItem="UnT-bw-Ou7" secondAttribute="top" id="xzh-vs-Tzd"/>
+                                    <constraint firstItem="bzC-rv-HCZ" firstAttribute="width" secondItem="Rxg-bl-7oY" secondAttribute="width" id="fQK-6g-XPk"/>
                                 </constraints>
-                            </view>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bzC-rv-HCZ" firstAttribute="leading" secondItem="FzM-5b-Q7n" secondAttribute="leading" id="3xT-jx-9Ad"/>
-                            <constraint firstItem="qs4-WA-5Iq" firstAttribute="leading" secondItem="FzM-5b-Q7n" secondAttribute="leading" id="7XQ-Ra-mlz"/>
-                            <constraint firstAttribute="bottom" secondItem="UnT-bw-Ou7" secondAttribute="bottom" id="D8T-0l-aBv"/>
-                            <constraint firstAttribute="trailing" secondItem="bzC-rv-HCZ" secondAttribute="trailing" id="Fd9-V7-g3k"/>
-                            <constraint firstAttribute="bottom" secondItem="mqo-iy-zfg" secondAttribute="bottom" id="H1Z-0a-a75"/>
-                            <constraint firstAttribute="bottom" secondItem="qs4-WA-5Iq" secondAttribute="bottom" id="HxQ-9A-MNo"/>
-                            <constraint firstAttribute="trailing" secondItem="UnT-bw-Ou7" secondAttribute="trailing" id="Vg2-oe-HH9"/>
-                            <constraint firstItem="UnT-bw-Ou7" firstAttribute="top" secondItem="bzC-rv-HCZ" secondAttribute="bottom" id="X4M-Pq-L4c"/>
-                            <constraint firstItem="mqo-iy-zfg" firstAttribute="leading" secondItem="FzM-5b-Q7n" secondAttribute="leading" id="fs2-01-ppU"/>
-                            <constraint firstItem="bzC-rv-HCZ" firstAttribute="top" secondItem="ZT9-dj-9dN" secondAttribute="top" id="kTb-UC-5OJ"/>
-                            <constraint firstItem="mqo-iy-zfg" firstAttribute="top" secondItem="ZT9-dj-9dN" secondAttribute="top" id="ldQ-jN-kYO"/>
-                            <constraint firstAttribute="trailing" secondItem="qs4-WA-5Iq" secondAttribute="trailing" id="lfc-aS-tcR"/>
-                            <constraint firstItem="UnT-bw-Ou7" firstAttribute="leading" secondItem="FzM-5b-Q7n" secondAttribute="leading" id="pzR-xs-F4U"/>
-                            <constraint firstAttribute="trailing" secondItem="mqo-iy-zfg" secondAttribute="trailing" id="r2j-j0-0Xr"/>
-                            <constraint firstItem="qs4-WA-5Iq" firstAttribute="top" secondItem="ZT9-dj-9dN" secondAttribute="top" id="wz7-cB-9pM"/>
+                            <constraint firstAttribute="trailing" secondItem="m3Y-s9-yVG" secondAttribute="trailing" id="167-g5-4lk"/>
+                            <constraint firstItem="m3Y-s9-yVG" firstAttribute="leading" secondItem="FzM-5b-Q7n" secondAttribute="leading" id="42T-Ub-LsS"/>
+                            <constraint firstItem="X5x-hU-38c" firstAttribute="width" secondItem="FzM-5b-Q7n" secondAttribute="width" constant="-80" id="JiD-DE-gM0"/>
+                            <constraint firstItem="ZT9-dj-9dN" firstAttribute="top" secondItem="Rxg-bl-7oY" secondAttribute="top" id="YAE-wa-2lh"/>
+                            <constraint firstAttribute="bottom" secondItem="m3Y-s9-yVG" secondAttribute="bottom" id="YFm-Me-eDu"/>
+                            <constraint firstItem="Rxg-bl-7oY" firstAttribute="centerX" secondItem="ZT9-dj-9dN" secondAttribute="centerX" id="Zg2-df-MIW"/>
+                            <constraint firstItem="Rxg-bl-7oY" firstAttribute="width" secondItem="FzM-5b-Q7n" secondAttribute="width" id="cFm-41-9zm"/>
+                            <constraint firstAttribute="trailing" secondItem="ym9-dH-gvI" secondAttribute="trailing" id="da8-xD-LaE"/>
+                            <constraint firstItem="Rxg-bl-7oY" firstAttribute="bottom" secondItem="FzM-5b-Q7n" secondAttribute="bottom" constant="-30" id="fXa-hU-dLC"/>
+                            <constraint firstAttribute="bottom" secondItem="ym9-dH-gvI" secondAttribute="bottom" id="hSq-3s-E2t"/>
+                            <constraint firstItem="MtZ-ao-kA2" firstAttribute="width" secondItem="FzM-5b-Q7n" secondAttribute="height" multiplier="290:207" id="iXK-Hy-Jlz"/>
+                            <constraint firstItem="ym9-dH-gvI" firstAttribute="leading" secondItem="FzM-5b-Q7n" secondAttribute="leading" id="k9L-ih-K8X"/>
+                            <constraint firstItem="m3Y-s9-yVG" firstAttribute="top" secondItem="ZT9-dj-9dN" secondAttribute="top" id="nKT-VU-Pjo"/>
+                            <constraint firstItem="ym9-dH-gvI" firstAttribute="top" secondItem="ZT9-dj-9dN" secondAttribute="top" id="sjd-6J-FIO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZT9-dj-9dN"/>
                     </view>

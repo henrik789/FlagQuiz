@@ -11,6 +11,16 @@ import UIKit
 
 class FlagViewController: UIViewController {
     
+    // Screen width.
+    public var screenWidth: CGFloat {
+        return UIScreen.main.bounds.width
+    }
+    
+    // Screen height.
+    public var screenHeight: CGFloat {
+        return UIScreen.main.bounds.height
+    }
+    @IBOutlet weak var flagView: UIView!
     var givenLand = String()
     var landFullname = String()
     var getFlags = GetFlags()
@@ -53,13 +63,23 @@ class FlagViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        flagView.frame = CGRect(x: screenWidth / 5, y: screenHeight / 2, width: screenWidth / 4, height: screenHeight / 3)
+//        flagView.layer.cornerRadius = flagView.frame.size.height / 2
+//        flagView.clipsToBounds = true
         getFlags.buildArray()
+        config()
 //        flagImage.layer.borderColor = UIColor.black.cgColor
 //        flagImage.layer.borderWidth = 1
         
     }
     
+    
+    func config() {
+        landOne.commonStyle()
+        landTwo.commonStyle()
+        landThre.commonStyle()
+        landFour.commonStyle()
+    }
     
     func setCountryName(land: String) {
         answer = getFlags.checkCountry(landCode: land)

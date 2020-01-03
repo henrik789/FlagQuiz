@@ -148,7 +148,7 @@ class GetFlags {
             case "ca":
                 return "Canada"
             case "cf":
-                return "The Central \nAfrican Republic"
+                return "The Central African Republic"
             case "cl":
                 return "Chile"
             case "cm":
@@ -218,7 +218,7 @@ class GetFlags {
             case "dk":
                 return "Denmark"
             case "cd":
-                return "The Democratic \nRepublic of Congo"
+                return "The Democratic Republic of Congo"
             case "cz":
                 return "The Czech Republic"
             case "cy":
