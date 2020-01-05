@@ -69,7 +69,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map-3483539_1920" translatesAutoresizingMaskIntoConstraints="NO" id="m3Y-s9-yVG">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globe-895580_1920" translatesAutoresizingMaskIntoConstraints="NO" id="m3Y-s9-yVG">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ym9-dH-gvI">
@@ -78,7 +78,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
-                                <blurEffect style="light"/>
+                                <vibrancyEffect>
+                                    <blurEffect style="light"/>
+                                </vibrancyEffect>
                             </visualEffectView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Rxg-bl-7oY">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="384"/>
@@ -89,26 +91,22 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XO1-AV-NbE">
                                                 <rect key="frame" x="0.0" y="2" width="896" height="58"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEH-la-Fmf">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mr2-Gc-e1J" userLabel="TimerLabel">
                                                         <rect key="frame" x="0.0" y="0.0" width="224" height="58"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="28"/>
-                                                        <state key="normal" title="New Flag">
-                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="newFlag:" destination="cOq-au-2od" eventType="touchUpInside" id="uad-fL-GdV"/>
-                                                        </connections>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flags:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wr9-6f-i3d">
-                                                        <rect key="frame" x="224" y="0.0" width="224" height="58"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="25"/>
-                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="26"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DhG-hy-N4w">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flags:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wr9-6f-i3d">
+                                                        <rect key="frame" x="224" y="0.0" width="224" height="58"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="25"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DhG-hy-N4w">
                                                         <rect key="frame" x="448" y="0.0" width="224" height="58"/>
                                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="25"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globe_white" translatesAutoresizingMaskIntoConstraints="NO" id="k4R-a8-rx4">
@@ -117,7 +115,6 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" cyan="0.0" magenta="0.52970126799999995" yellow="0.31905539150000001" black="8.346814138e-05" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="XO1-AV-NbE" firstAttribute="centerX" secondItem="bzC-rv-HCZ" secondAttribute="centerX" id="5F8-MR-kIq"/>
                                             <constraint firstItem="XO1-AV-NbE" firstAttribute="centerY" secondItem="bzC-rv-HCZ" secondAttribute="centerY" id="AGH-CO-YxA"/>
@@ -138,7 +135,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="403" height="37"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="18"/>
-                                                                <state key="normal" title="Button">
+                                                                <state key="normal" title="Land One">
                                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 </state>
                                                                 <connections>
@@ -149,7 +146,7 @@
                                                                 <rect key="frame" x="413" y="0.0" width="403" height="37"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="18"/>
-                                                                <state key="normal" title="Button">
+                                                                <state key="normal" title="Land Two">
                                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 </state>
                                                                 <connections>
@@ -165,7 +162,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="403" height="37"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="18"/>
-                                                                <state key="normal" title="Button">
+                                                                <state key="normal" title="Land Three">
                                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 </state>
                                                                 <connections>
@@ -176,7 +173,7 @@
                                                                 <rect key="frame" x="413" y="0.0" width="403" height="37"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="18"/>
-                                                                <state key="normal" title="Button">
+                                                                <state key="normal" title="Land Four">
                                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 </state>
                                                                 <connections>
@@ -228,6 +225,8 @@
                         <viewLayoutGuide key="safeArea" id="ZT9-dj-9dN"/>
                     </view>
                     <connections>
+                        <outlet property="countdownLabel" destination="lDz-e1-Ces" id="rgr-Wd-XHl"/>
+                        <outlet property="countdownLabelHome" destination="Mr2-Gc-e1J" id="9tC-Gu-fXR"/>
                         <outlet property="flagImage" destination="MtZ-ao-kA2" id="g0b-Xn-nPY"/>
                         <outlet property="flagLabel" destination="Wr9-6f-i3d" id="SPK-f6-nKJ"/>
                         <outlet property="landFour" destination="Uzw-t7-YqJ" id="gk0-3W-4T2"/>
@@ -235,9 +234,39 @@
                         <outlet property="landThre" destination="X2f-zI-Rcf" id="pj8-J5-rlz"/>
                         <outlet property="landTwo" destination="YtZ-jQ-hyP" id="gTG-BG-Jvx"/>
                         <outlet property="pointsLabel" destination="DhG-hy-N4w" id="lhx-rL-zRX"/>
+                        <outlet property="startView" destination="2Ov-3w-R5S" id="Pbh-Ug-tCB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hE4-aG-Kur" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="Ps3-cw-jZn">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="TyK-Mp-UGf"/>
+                </view>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" id="2Ov-3w-R5S" userLabel="StartView">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WLf-Wo-BHz">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDz-e1-Ces">
+                                <rect key="frame" x="40" y="35" width="162" height="69"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="70"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </view>
+                    <constraints>
+                        <constraint firstItem="lDz-e1-Ces" firstAttribute="height" secondItem="2Ov-3w-R5S" secondAttribute="height" id="Ibb-tf-kPw"/>
+                        <constraint firstItem="lDz-e1-Ces" firstAttribute="centerX" secondItem="2Ov-3w-R5S" secondAttribute="centerX" id="hxb-VR-vwt"/>
+                        <constraint firstItem="lDz-e1-Ces" firstAttribute="centerY" secondItem="2Ov-3w-R5S" secondAttribute="centerY" id="sOR-JM-UM5"/>
+                        <constraint firstItem="lDz-e1-Ces" firstAttribute="width" secondItem="2Ov-3w-R5S" secondAttribute="width" id="ut4-5v-l0v"/>
+                    </constraints>
+                    <blurEffect style="light"/>
+                </visualEffectView>
             </objects>
             <point key="canvasLocation" x="850.44642857142856" y="137.68115942028987"/>
         </scene>
@@ -245,6 +274,7 @@
     <resources>
         <image name="cooltext344728485500751" width="360" height="97"/>
         <image name="cv.png" width="580" height="341"/>
+        <image name="globe-895580_1920" width="1920" height="1029"/>
         <image name="globe_white" width="1500" height="1500"/>
         <image name="map-3483539_1920" width="1920" height="1275"/>
         <image name="start" width="219" height="87"/>

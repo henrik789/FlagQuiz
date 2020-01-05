@@ -1,10 +1,3 @@
-//
-//  FlagViewController.swift
-//  FlagQuiz
-//
-//  Created by Henrik on 2019-12-23.
-//  Copyright © 2019 Henrik. All rights reserved.
-//
 
 import UIKit
 
@@ -15,18 +8,22 @@ class FlagViewController: UIViewController {
     public var screenWidth: CGFloat {
         return UIScreen.main.bounds.width
     }
-    
     // Screen height.
     public var screenHeight: CGFloat {
         return UIScreen.main.bounds.height
     }
+    @IBOutlet var startView: UIVisualEffectView!
+    @IBOutlet weak var countdownLabel: UILabel!
     @IBOutlet weak var flagView: UIView!
+    @IBOutlet weak var countdownLabelHome: UILabel!
     var givenLand = String()
     var landFullname = String()
     var getFlags = GetFlags()
-    var points = 0
+    var points = 0.0
     var flagCounter = 0
+    var randomNumber = 0
     var answer = String()
+    var timer = Timer()
     @IBOutlet weak var flagLabel: UILabel!
     
     @IBOutlet weak var pointsLabel: UILabel!
@@ -63,27 +60,37 @@ class FlagViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        flagView.frame = CGRect(x: screenWidth / 5, y: screenHeight / 2, width: screenWidth / 4, height: screenHeight / 3)
-//        flagView.layer.cornerRadius = flagView.frame.size.height / 2
-//        flagView.clipsToBounds = true
+        
         getFlags.buildArray()
         config()
-//        flagImage.layer.borderColor = UIColor.black.cgColor
-//        flagImage.layer.borderWidth = 1
         
     }
     
     
     func config() {
+        startView.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
+        view.addSubview(startView)
+        var i = 3
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            i -= 1
+            self.countdownLabel.text = "\(i)"
+            print("counter: ", String(i))
+            if i == 0 {
+                timer.invalidate()
+                self.startView.removeFromSuperview()
+                self.newFlag((Any).self)
+            }
+        }
         landOne.commonStyle()
         landTwo.commonStyle()
         landThre.commonStyle()
         landFour.commonStyle()
+        startTimer()
     }
     
     func setCountryName(land: String) {
         answer = getFlags.checkCountry(landCode: land)
-        let randomNumber = Int.random(in: 1...4)
+        randomNumber = Int.random(in: 1...4)
         if randomNumber == 1 {
             landOne.setTitle(answer, for: .normal)
             setOtherNames(fake1: landTwo, fake2: landThre, fake3: landFour)
@@ -116,12 +123,76 @@ class FlagViewController: UIViewController {
     
     func evaluate(button: UIButton) {
         if flagCounter <= getFlags.totalFlags.count {
-        if button.currentTitle == answer {
-            points = points + 1
-            pointsLabel.text = "Points: \(points)"
-        }
-        pointsLabel.text = "Points: \(points)"
-        newFlag((Any).self)
+            if button.currentTitle == answer {
+
+                UIView.transition(with: button, duration: 0.3, options: .curveEaseOut, animations: {
+                    button.backgroundColor = .green
+                    button.setTitleColor(.white, for: .normal)
+                })  { _ in
+//                    self.pointsLabel.text = "Points: \(self.points)"
+                    self.newFlag((Any).self)
+                    button.backgroundColor = UIColor.white
+                    button.setTitleColor(.black, for: .normal)
+                }
+                
+                points = startTimer()
+                let formatted = String(format: "%.2f", points)
+                pointsLabel.text = "Points: \(formatted)"
+                timer.invalidate()
+            }else {
+                UIView.transition(with: button, duration: 0.8, options: .curveEaseOut, animations: {
+                    button.backgroundColor = .red
+                    button.setTitleColor(.white, for: .normal)
+                })  { _ in
+                    button.backgroundColor = UIColor.white
+                    button.setTitleColor(.black, for: .normal)
+                    print(self.randomNumber)
+                    if self.randomNumber == 1 {
+                        UIView.transition(with: button, duration: 0.8, options: .curveEaseOut, animations: {
+                            self.landOne.backgroundColor = .green
+                            self.landOne.setTitleColor(.white, for: .normal)
+                        })  { _ in
+//                            self.pointsLabel.text = "Points: \(self.points)"
+                            self.newFlag((Any).self)
+                            self.landOne.backgroundColor = UIColor.white
+                            self.landOne.setTitleColor(.black, for: .normal)
+                        }
+                    } else if self.randomNumber == 2 {
+                        UIView.transition(with: button, duration: 0.8, options: .curveEaseOut, animations: {
+                            self.landTwo.backgroundColor = .green
+                            self.landTwo.setTitleColor(.white, for: .normal)
+                        })  { _ in
+//                            self.pointsLabel.text = "Points: \(self.points)"
+                            self.newFlag((Any).self)
+                            self.landTwo.backgroundColor = UIColor.white
+                            self.landTwo.setTitleColor(.black, for: .normal)
+                        }
+                    }else if self.randomNumber == 3 {
+                        UIView.transition(with: button, duration: 0.8, options: .curveEaseOut, animations: {
+                            self.landThre.backgroundColor = .green
+                            self.landThre.setTitleColor(.white, for: .normal)
+                        })  { _ in
+//                            self.pointsLabel.text = "Points: \(self.points)"
+                            self.newFlag((Any).self)
+                            self.landThre.backgroundColor = UIColor.white
+                            self.landThre.setTitleColor(.black, for: .normal)
+                        }
+                    } else if self.randomNumber == 4 {
+                        UIView.transition(with: button, duration: 0.8, options: .curveEaseOut, animations: {
+                            self.landFour.backgroundColor = .green
+                            self.landFour.setTitleColor(.white, for: .normal)
+                        })  { _ in
+//                            self.pointsLabel.text = "Points: \(self.points)"
+                            self.newFlag((Any).self)
+                            self.landFour.backgroundColor = UIColor.white
+                            self.landFour.setTitleColor(.black, for: .normal)
+                        }
+                    }
+                }
+                
+                
+            }
+            
         }else {
             startOver()
         }
@@ -129,6 +200,20 @@ class FlagViewController: UIViewController {
     
     func startOver() {
         pointsLabel.text = "All flags done"
+    }
+    
+    func startTimer() -> Double {
+        var i = 15.0
+        timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { timer in
+            i -= 0.01
+            let formatted = String(format: "Time: %.2f", i)
+            self.countdownLabelHome.text = "\(formatted)"
+            if i == 0 {
+                timer.invalidate()
+                self.newFlag((Any).self)
+            }
+        }
+        return i
     }
     
 }
