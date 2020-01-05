@@ -10,6 +10,7 @@
 		95A6E967069735CC35AC0AB7 /* Pods_FlagQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DF35329599C8A4D1FA2ABC /* Pods_FlagQuiz.framework */; };
 		AF32E70523BF420100532923 /* SnowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF32E70423BF420100532923 /* SnowView.swift */; };
 		AF59B08123BFE53D00B8A310 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF59B08023BFE53D00B8A310 /* UIButton.swift */; };
+		AF59B08323C28BB900B8A310 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF59B08223C28BB900B8A310 /* UIColor.swift */; };
 		AF73B33623AD351C006E0BDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF73B33523AD351C006E0BDC /* AppDelegate.swift */; };
 		AF73B33823AD351C006E0BDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF73B33723AD351C006E0BDC /* ViewController.swift */; };
 		AF73B33B23AD351C006E0BDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF73B33923AD351C006E0BDC /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		AF3A380923B8AA71000BB091 /* Pixeled.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pixeled.ttf; sourceTree = "<group>"; };
 		AF3A380A23B8ACB9000BB091 /* Pinky Cat Demo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pinky Cat Demo.ttf"; sourceTree = "<group>"; };
 		AF59B08023BFE53D00B8A310 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		AF59B08223C28BB900B8A310 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		AF73B33223AD351C006E0BDC /* FlagQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlagQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF73B33523AD351C006E0BDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF73B33723AD351C006E0BDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				AF8DCD3A23B8124D00AAE9B6 /* Countries */,
 				AFCB59F323B0B53800E69A14 /* FlagViewController.swift */,
 				AF59B08023BFE53D00B8A310 /* UIButton.swift */,
+				AF59B08223C28BB900B8A310 /* UIColor.swift */,
 				AF73B34723AD7FCE006E0BDC /* GetFlags.swift */,
 				AF3A380923B8AA71000BB091 /* Pixeled.ttf */,
 				AF3A380A23B8ACB9000BB091 /* Pinky Cat Demo.ttf */,
@@ -224,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFCB59F423B0B53800E69A14 /* FlagViewController.swift in Sources */,
+				AF59B08323C28BB900B8A310 /* UIColor.swift in Sources */,
 				AF73B33823AD351C006E0BDC /* ViewController.swift in Sources */,
 				AF32E70523BF420100532923 /* SnowView.swift in Sources */,
 				AF73B33623AD351C006E0BDC /* AppDelegate.swift in Sources */,
