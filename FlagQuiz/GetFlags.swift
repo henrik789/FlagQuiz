@@ -13,7 +13,6 @@ class GetFlags {
         let filesFromBundle = try! fileManager.contentsOfDirectory(atPath: docPath)
         pictures = filesFromBundle
         totalFlags = filesFromBundle
-        print(pictures.count)
     }
     
     
@@ -31,7 +30,7 @@ class GetFlags {
                 let randomFlag = pictures[randomNumber]
                 let fileName = randomFlag
                 pictures.remove(at: randomNumber)
-                print(pictures.count)
+//                print(pictures.count)
                 var components = fileName.components(separatedBy: ".")
                 if components.count > 1 { // If there is a file extension
                     components.removeLast()
@@ -41,15 +40,16 @@ class GetFlags {
         return "Swedn"
     }
         
-        func buildFlagArray1() -> String {
+    func buildFlagArray1(number: Int) -> String {
             
-            let randomNumber = Int.random(in: 0..<totalFlags.count)
-            let randomFlag = totalFlags[randomNumber]
+//            let randomNumber = Int.random(in: 0..<totalFlags.count )
+            let randomFlag = totalFlags[number]
             let fileName = randomFlag
             
             var components = fileName.components(separatedBy: ".")
             if components.count > 1 { // If there is a file extension
                 components.removeLast()
+//                print("1: \(components.joined(separator: "."))")
                 return components.joined(separator: ".")
             }
             
@@ -59,13 +59,14 @@ class GetFlags {
         
         func buildFlagArray2() -> String {
             
-            let randomNumber = Int.random(in: 0..<totalFlags.count)
+            let randomNumber = Int.random(in: totalFlags.count / (1/3)..<totalFlags.count / (2/3))
             let randomFlag = totalFlags[randomNumber]
             let fileName = randomFlag
             
             var components = fileName.components(separatedBy: ".")
             if components.count > 1 { // If there is a file extension
                 components.removeLast()
+//                print("2: \(components.joined(separator: "."))")
                 return components.joined(separator: ".")
             }
             return fileName
@@ -73,13 +74,14 @@ class GetFlags {
         
         func buildFlagArray3() -> String {
             
-            let randomNumber = Int.random(in: 0..<totalFlags.count)
+            let randomNumber = Int.random(in: totalFlags.count / (2/3)..<totalFlags.count)
             let randomFlag = totalFlags[randomNumber]
             let fileName = randomFlag
             
             var components = fileName.components(separatedBy: ".")
             if components.count > 1 { // If there is a file extension
                 components.removeLast()
+//                print("3: \(components.joined(separator: "."))")
                 return components.joined(separator: ".")
             }
             return fileName
