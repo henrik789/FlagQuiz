@@ -368,7 +368,7 @@ class GetFlags {
             case "pe":
                 return "Peru"
             case "ph":
-                return "The Philppines"
+                return "The Philippines"
             case "pl":
                 return "Poland"
             case "pt":
@@ -390,7 +390,7 @@ class GetFlags {
             case "lc":
                 return "Saint Lucia"
             case "vc":
-                return "saint Vincent and the Grenadines"
+                return "Saint Vincent and the Grenadines"
             case "ws":
                 return "Samoa"
             case "sm":
@@ -414,83 +414,83 @@ class GetFlags {
             case "si":
                 return "Slovenia"
             case "sb":
-                return "Gabon"
+                return "The Solomon Islands"
             case "so":
-                return "France"
+                return "Somalia"
             case "za":
-                return "Finland"
+                return "South Africa"
             case "kr":
-                return "Fiji"
+                return "South Korea"
             case "ss":
-                return "Ethiopia"
+                return "South Sudan"
             case "es":
-                return "Estonia"
+                return "Spain"
             case "lk":
-                return "Eritrea"
+                return "Sri Lanka"
             case "ps":
-                return "Equatorial Guinea"
+                return "Palestine"
             case "sd":
-                return "El Salvador"
+                return "Sudan"
             case "sr":
-                return "Egypt"
+                return "Suriname"
             case "sz":
-                return "Ecuador"
+                return "Swaziland"
             case "se":
-                return "East Timor"
+                return "Sweden"
             case "ch":
-                return "The Dominican Republic"
+                return "Switzerland"
             case "sy":
-                return "Dominica"
+                return "Syria"
             case "tj":
-                return "Djibouti"
+                return "Tajikistan"
             case "tz":
-                return "Denmark"
+                return "Tanzania"
             case "th":
-                return "The Democratic Republic of Congo"
+                return "Thailand"
             case "tg":
-                return "The Czech Republic"
+                return "Togo"
             case "to":
-                return "Cyprus"
+                return "Tonga"
             case "tt":
-                return "Cuba"
+                return "Trinidad and Tobago"
             case "tn":
-                return "Croatia"
+                return "Tunisia"
             case "tr":
-                return "Cote d'Ivorie"
+                return "Turkey"
             case "tm":
-                return "Costa Rica"
+                return "Turkmenistan"
             case "tv":
-                return "Cook Islands"
+                return "Tuvalu"
             case "ug":
-                return "The Comoros"
+                return "Uganda"
             case "ua":
-                return "Colombia"
+                return "Ukraine"
             case "ae":
-                return "The Dominican Republic"
+                return "The United Arab Emirates"
             case "gb":
-                return "Dominica"
+                return "The United Kingdom"
             case "us":
-                return "Djibouti"
+                return "The United States"
             case "uy":
-                return "Denmark"
+                return "Uruguay"
             case "uz":
-                return "The Democratic Republic of Congo"
+                return "Uzbekistan"
             case "vu":
-                return "The Czech Republic"
+                return "Vanuatu"
             case "va":
-                return "Cyprus"
+                return "The Vatican City"
             case "ve":
-                return "Cuba"
+                return "Venezuela"
             case "vn":
-                return "Croatia"
+                return "Vietnam"
             case "eh":
-                return "Cote d'Ivorie"
+                return "Western Sahara"
             case "ye":
-                return "Costa Rica"
+                return "Yemen"
             case "zm":
-                return "Cook Islands"
+                return "Zambia"
             case "zw":
-                return "The Comoros"
+                return "Zimababwe"
 
             default:
                 return "Sweden"
