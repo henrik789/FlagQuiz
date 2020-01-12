@@ -19,33 +19,29 @@ class ViewController: UIViewController {
         return UIScreen.main.bounds.height
     }
     
-    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var globe: UIImageView!
+    @IBOutlet weak var logo: UIImageView!
+    var menuVC = MenuViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        startAnimation()
-        
+        logo.alpha = 0
+        startAnimation()
         
     }
     
     func startAnimation() {
 
-            UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 2, options: .curveEaseIn, animations: {
-                self.view.alpha = 1
-                self.view.backgroundColor = UIColor.white
-                self.view.frame = CGRect(x: 10, y: 200, width: self.screenWidth , height: self.screenHeight / 2)
-                self.view.layer.cornerRadius = 20
-//                self.view.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
-                let snowView = SnowView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
-                let snowClipView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
-                snowClipView.clipsToBounds = true
-                snowClipView.addSubview(snowView)
-                self.view.addSubview(snowClipView)
-                
-            }) { _ in
-                
-                
+        UIView.animate(withDuration: 2.0, delay: 0, options: .curveEaseInOut, animations: {
+            self.globe.frame = CGRect(x: 0, y: 0, width: self.screenWidth  , height: self.screenHeight )
+            self.logo.alpha = 1
+            
+        }, completion: { finished in
+            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(1000)) {
+                self.performSegue(withIdentifier: "menuSegue", sender: self)
             }
+            
+        })
     }
     
 }

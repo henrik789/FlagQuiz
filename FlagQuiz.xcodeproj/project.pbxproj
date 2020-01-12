@@ -17,6 +17,7 @@
 		AF73B33D23AD351D006E0BDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF73B33C23AD351D006E0BDC /* Assets.xcassets */; };
 		AF73B34023AD351D006E0BDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF73B33E23AD351D006E0BDC /* LaunchScreen.storyboard */; };
 		AF73B34823AD7FCE006E0BDC /* GetFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF73B34723AD7FCE006E0BDC /* GetFlags.swift */; };
+		AF8D026323CBBC970047C006 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D026223CBBC970047C006 /* MenuViewController.swift */; };
 		AF8DCD3B23B8124E00AAE9B6 /* Countries in Resources */ = {isa = PBXBuildFile; fileRef = AF8DCD3A23B8124D00AAE9B6 /* Countries */; };
 		AFCB59F423B0B53800E69A14 /* FlagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCB59F323B0B53800E69A14 /* FlagViewController.swift */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,7 @@
 		AF73B33F23AD351D006E0BDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF73B34123AD351D006E0BDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF73B34723AD7FCE006E0BDC /* GetFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFlags.swift; sourceTree = "<group>"; };
+		AF8D026223CBBC970047C006 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		AF8DCD3A23B8124D00AAE9B6 /* Countries */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Countries; sourceTree = "<group>"; };
 		AFCB59F323B0B53800E69A14 /* FlagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagViewController.swift; sourceTree = "<group>"; };
 		DB16D7D32B34014671EBF125 /* Pods-FlagQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlagQuiz.debug.xcconfig"; path = "Target Support Files/Pods-FlagQuiz/Pods-FlagQuiz.debug.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				AF73B33523AD351C006E0BDC /* AppDelegate.swift */,
 				AF73B33723AD351C006E0BDC /* ViewController.swift */,
+				AF8D026223CBBC970047C006 /* MenuViewController.swift */,
 				AF32E70423BF420100532923 /* SnowView.swift */,
 				AF8DCD3A23B8124D00AAE9B6 /* Countries */,
 				AFCB59F323B0B53800E69A14 /* FlagViewController.swift */,
@@ -233,6 +236,7 @@
 				AF73B33623AD351C006E0BDC /* AppDelegate.swift in Sources */,
 				AF59B08123BFE53D00B8A310 /* UIButton.swift in Sources */,
 				AF73B34823AD7FCE006E0BDC /* GetFlags.swift in Sources */,
+				AF8D026323CBBC970047C006 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

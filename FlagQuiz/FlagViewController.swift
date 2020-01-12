@@ -18,7 +18,6 @@ class FlagViewController: UIViewController {
     var randomNumber = 0
     var answer = String()
     
-    @IBOutlet var startView: UIVisualEffectView!
     @IBOutlet weak var flagView: UIView!
     @IBOutlet weak var countdownLabelHome: UILabel!
     @IBOutlet weak var flagLabel: UILabel!
@@ -61,13 +60,13 @@ class FlagViewController: UIViewController {
         flagLabel.text = "Flags: \(flagCounter) / \(getFlags.totalFlags.count + 1)"
         getFlags.buildArray()
         config()
-        startView.removeFromSuperview()
+//        startView.removeFromSuperview()
     }
     @IBAction func menuButton(_ sender: Any) {
-        startView.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
+//        startView.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
         //        startView.layer.cornerRadius = screenHeight / 2
         //        startView.layer.masksToBounds = true
-        view.addSubview(startView)
+//        view.addSubview(startView)
         
         
     }
@@ -81,10 +80,6 @@ class FlagViewController: UIViewController {
     
     
     func config() {
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(1000)) {
-            print("BOOYAH!")
-        }
         newFlag((Any).self)
         landOne.commonStyle()
         landTwo.commonStyle()
