@@ -11,6 +11,10 @@
 		AF32E70523BF420100532923 /* SnowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF32E70423BF420100532923 /* SnowView.swift */; };
 		AF59B08123BFE53D00B8A310 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF59B08023BFE53D00B8A310 /* UIButton.swift */; };
 		AF59B08323C28BB900B8A310 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF59B08223C28BB900B8A310 /* UIColor.swift */; };
+		AF66382823EAAD2500225A25 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF66382723EAAD2500225A25 /* SwiftyJSON.swift */; };
+		AF66382A23EAB29600225A25 /* AllJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF66382923EAB29600225A25 /* AllJSON.swift */; };
+		AF66382E23EB21F700225A25 /* countriesDict.json in Resources */ = {isa = PBXBuildFile; fileRef = AF66382D23EB21F600225A25 /* countriesDict.json */; };
+		AF66383023ECA99C00225A25 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF66382F23ECA99C00225A25 /* Country.swift */; };
 		AF73B33623AD351C006E0BDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF73B33523AD351C006E0BDC /* AppDelegate.swift */; };
 		AF73B33823AD351C006E0BDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF73B33723AD351C006E0BDC /* ViewController.swift */; };
 		AF73B33B23AD351C006E0BDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF73B33923AD351C006E0BDC /* Main.storyboard */; };
@@ -19,6 +23,8 @@
 		AF73B34823AD7FCE006E0BDC /* GetFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF73B34723AD7FCE006E0BDC /* GetFlags.swift */; };
 		AF8D026323CBBC970047C006 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D026223CBBC970047C006 /* MenuViewController.swift */; };
 		AF8DCD3B23B8124E00AAE9B6 /* Countries in Resources */ = {isa = PBXBuildFile; fileRef = AF8DCD3A23B8124D00AAE9B6 /* Countries */; };
+		AFBBA35223D0A43600ACEBB5 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBBA35123D0A43600ACEBB5 /* Timer.swift */; };
+		AFBBA35423D0E03300ACEBB5 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBBA35323D0E03300ACEBB5 /* WebViewController.swift */; };
 		AFCB59F423B0B53800E69A14 /* FlagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCB59F323B0B53800E69A14 /* FlagViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +36,10 @@
 		AF3A380A23B8ACB9000BB091 /* Pinky Cat Demo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pinky Cat Demo.ttf"; sourceTree = "<group>"; };
 		AF59B08023BFE53D00B8A310 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		AF59B08223C28BB900B8A310 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		AF66382723EAAD2500225A25 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		AF66382923EAB29600225A25 /* AllJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllJSON.swift; sourceTree = "<group>"; };
+		AF66382D23EB21F600225A25 /* countriesDict.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = countriesDict.json; sourceTree = "<group>"; };
+		AF66382F23ECA99C00225A25 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		AF73B33223AD351C006E0BDC /* FlagQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlagQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF73B33523AD351C006E0BDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF73B33723AD351C006E0BDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +50,8 @@
 		AF73B34723AD7FCE006E0BDC /* GetFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFlags.swift; sourceTree = "<group>"; };
 		AF8D026223CBBC970047C006 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		AF8DCD3A23B8124D00AAE9B6 /* Countries */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Countries; sourceTree = "<group>"; };
+		AFBBA35123D0A43600ACEBB5 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		AFBBA35323D0E03300ACEBB5 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		AFCB59F323B0B53800E69A14 /* FlagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagViewController.swift; sourceTree = "<group>"; };
 		DB16D7D32B34014671EBF125 /* Pods-FlagQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlagQuiz.debug.xcconfig"; path = "Target Support Files/Pods-FlagQuiz/Pods-FlagQuiz.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,12 +95,18 @@
 				AF32E70423BF420100532923 /* SnowView.swift */,
 				AF8DCD3A23B8124D00AAE9B6 /* Countries */,
 				AFCB59F323B0B53800E69A14 /* FlagViewController.swift */,
+				AFBBA35323D0E03300ACEBB5 /* WebViewController.swift */,
+				AF66382F23ECA99C00225A25 /* Country.swift */,
 				AF59B08023BFE53D00B8A310 /* UIButton.swift */,
+				AF73B33923AD351C006E0BDC /* Main.storyboard */,
+				AFBBA35123D0A43600ACEBB5 /* Timer.swift */,
 				AF59B08223C28BB900B8A310 /* UIColor.swift */,
 				AF73B34723AD7FCE006E0BDC /* GetFlags.swift */,
+				AF66382723EAAD2500225A25 /* SwiftyJSON.swift */,
+				AF66382923EAB29600225A25 /* AllJSON.swift */,
+				AF66382D23EB21F600225A25 /* countriesDict.json */,
 				AF3A380923B8AA71000BB091 /* Pixeled.ttf */,
 				AF3A380A23B8ACB9000BB091 /* Pinky Cat Demo.ttf */,
-				AF73B33923AD351C006E0BDC /* Main.storyboard */,
 				AF73B33C23AD351D006E0BDC /* Assets.xcassets */,
 				AF73B33E23AD351D006E0BDC /* LaunchScreen.storyboard */,
 				AF73B34123AD351D006E0BDC /* Info.plist */,
@@ -174,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF73B34023AD351D006E0BDC /* LaunchScreen.storyboard in Resources */,
+				AF66382E23EB21F700225A25 /* countriesDict.json in Resources */,
 				AF8DCD3B23B8124E00AAE9B6 /* Countries in Resources */,
 				AF73B33D23AD351D006E0BDC /* Assets.xcassets in Resources */,
 				AF73B33B23AD351C006E0BDC /* Main.storyboard in Resources */,
@@ -232,9 +251,14 @@
 				AFCB59F423B0B53800E69A14 /* FlagViewController.swift in Sources */,
 				AF59B08323C28BB900B8A310 /* UIColor.swift in Sources */,
 				AF73B33823AD351C006E0BDC /* ViewController.swift in Sources */,
+				AF66382A23EAB29600225A25 /* AllJSON.swift in Sources */,
+				AF66383023ECA99C00225A25 /* Country.swift in Sources */,
+				AF66382823EAAD2500225A25 /* SwiftyJSON.swift in Sources */,
+				AFBBA35423D0E03300ACEBB5 /* WebViewController.swift in Sources */,
 				AF32E70523BF420100532923 /* SnowView.swift in Sources */,
 				AF73B33623AD351C006E0BDC /* AppDelegate.swift in Sources */,
 				AF59B08123BFE53D00B8A310 /* UIButton.swift in Sources */,
+				AFBBA35223D0A43600ACEBB5 /* Timer.swift in Sources */,
 				AF73B34823AD7FCE006E0BDC /* GetFlags.swift in Sources */,
 				AF8D026323CBBC970047C006 /* MenuViewController.swift in Sources */,
 			);

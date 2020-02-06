@@ -20,24 +20,25 @@ class ViewController: UIViewController {
     }
     
     @IBOutlet weak var globe: UIImageView!
-    @IBOutlet weak var logo: UIImageView!
+    @IBOutlet weak var logoLabel: UILabel!
+//    @IBOutlet weak var logo: UIImageView!
     var menuVC = MenuViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        logo.alpha = 0
+        logoLabel.alpha = 0
         startAnimation()
         
     }
     
     func startAnimation() {
 
-        UIView.animate(withDuration: 2.0, delay: 0, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.7, delay: 0, options: .curveEaseInOut, animations: {
             self.globe.frame = CGRect(x: 0, y: 0, width: self.screenWidth  , height: self.screenHeight )
-            self.logo.alpha = 1
+            self.logoLabel.alpha = 1
             
         }, completion: { finished in
-            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(1000)) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(700)) {
                 self.performSegue(withIdentifier: "menuSegue", sender: self)
             }
             

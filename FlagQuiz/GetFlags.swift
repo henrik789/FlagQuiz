@@ -25,70 +25,63 @@ class GetFlags {
                 components.removeLast()
                 return components.joined(separator: ".")
             }
-            }else {
-                let randomNumber = Int.random(in: 0..<pictures.count)
-                let randomFlag = pictures[randomNumber]
-                let fileName = randomFlag
-                pictures.remove(at: randomNumber)
-//                print(pictures.count)
-                var components = fileName.components(separatedBy: ".")
-                if components.count > 1 { // If there is a file extension
-                    components.removeLast()
-                    return components.joined(separator: ".")
-                }
-            }
-        return "Swedn"
-    }
-        
-    func buildFlagArray1(number: Int) -> String {
-            
-//            let randomNumber = Int.random(in: 0..<totalFlags.count )
-            let randomFlag = totalFlags[number]
+        }else {
+            let randomNumber = Int.random(in: 0..<pictures.count)
+            let randomFlag = pictures[randomNumber]
             let fileName = randomFlag
-            
+            pictures.remove(at: randomNumber)
+            //                print(pictures.count)
             var components = fileName.components(separatedBy: ".")
             if components.count > 1 { // If there is a file extension
                 components.removeLast()
-//                print("1: \(components.joined(separator: "."))")
                 return components.joined(separator: ".")
             }
-            
-            return fileName
-            
         }
-//        
-//        func buildFlagArray2() -> String {
-//            
-//            let randomNumber = Int.random(in: totalFlags.count / (1/3)..<totalFlags.count / (2/3))
-//            let randomFlag = totalFlags[randomNumber]
-//            let fileName = randomFlag
-//            
-//            var components = fileName.components(separatedBy: ".")
-//            if components.count > 1 { // If there is a file extension
-//                components.removeLast()
-////                print("2: \(components.joined(separator: "."))")
-//                return components.joined(separator: ".")
-//            }
-//            return fileName
-//        }
-//        
-//        func buildFlagArray3() -> String {
-//            
-//            let randomNumber = Int.random(in: totalFlags.count / (2/3)..<totalFlags.count)
-//            let randomFlag = totalFlags[randomNumber]
-//            let fileName = randomFlag
-//            
-//            var components = fileName.components(separatedBy: ".")
-//            if components.count > 1 { // If there is a file extension
-//                components.removeLast()
-////                print("3: \(components.joined(separator: "."))")
-//                return components.joined(separator: ".")
-//            }
-//            return fileName
-//        }
-//        
+        return "Swedn"
+    }
+    
+    func buildFlagArray1(number: Int) -> String {
         
+        //            let randomNumber = Int.random(in: 0..<totalFlags.count )
+        let randomFlag = totalFlags[number]
+        let fileName = randomFlag
         
+        var components = fileName.components(separatedBy: ".")
+        if components.count > 1 { // If there is a file extension
+            components.removeLast()
+            //                print("1: \(components.joined(separator: "."))")
+            return components.joined(separator: ".")
+        }
+        
+        return fileName
+        
+    }
+    
+//    let json = "{ \"people\": [{ \"firstName\": \"Paul\", \"lastName\": \"Hudson\", \"isAlive\": true }, { \"firstName\": \"Angela\", \"lastName\": \"Merkel\", \"isAlive\": true }, { \"firstName\": \"George\", \"lastName\": \"Washington\", \"isAlive\": false } ] }"
+    
+        func readJSONFromFile(fileName: String) -> Any? {
+            var json: Any?
+            if let path = Bundle.main.path(forResource: fileName, ofType: "json") {
+                do {
+                    let fileUrl = URL(fileURLWithPath: path)
+                    // Getting data from JSON file using the file URL
+                    let data = try Data(contentsOf: fileUrl, options: .mappedIfSafe)
+//                    json = try? JSONSerialization.jsonObject(with: data)
+                    let json = try JSON(data: data)
+                    let personList = json[].map { (_, personJSON) in
+                        return Country(json: personJSON)
+                    }
+                    print(personList.count, personList[5].name)
+                    
+                    
+                } catch {
+                    // Handle error here
+                }
+            }
+            return json
+        }
+    
+    
         func checkCountry(landCode: String) -> String {
             switch landCode {
             case "ad":
@@ -491,7 +484,7 @@ class GetFlags {
                 return "Zambia"
             case "zw":
                 return "Zimababwe"
-
+                
             default:
                 return "Sweden"
             }

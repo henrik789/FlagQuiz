@@ -10,21 +10,27 @@ import UIKit
 
 class MenuViewController: UIViewController {
 
+    @IBOutlet weak var startFull: UIButton!
+    @IBOutlet weak var startTime: UIButton!
+    @IBOutlet weak var startRe: UIButton!
+    @IBOutlet weak var flagTable: UIButton!
+    @IBOutlet weak var HighScore: UIButton!
+    @IBOutlet weak var back: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        config()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func config() {
+        startRe.commonStyle()
+        startFull.commonStyle()
+        startTime.commonStyle()
+        flagTable.commonStyle()
+        HighScore.commonStyle()
+        back.commonStyle()
     }
-    */
+
 
 }

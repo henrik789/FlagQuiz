@@ -17,7 +17,10 @@ class FlagViewController: UIViewController {
     var flagCounter = 0
     var randomNumber = 0
     var answer = String()
+    var time = 0
+    var timer = Timer()
     
+    @IBOutlet var startView: UIView!
     @IBOutlet weak var flagView: UIView!
     @IBOutlet weak var countdownLabelHome: UILabel!
     @IBOutlet weak var flagLabel: UILabel!
@@ -26,6 +29,16 @@ class FlagViewController: UIViewController {
     @IBOutlet weak var landTwo: UIButton!
     @IBOutlet weak var landThre: UIButton!
     @IBOutlet weak var landFour: UIButton!
+    @IBOutlet weak var restartBtn: UIButton!
+    @IBAction func restartBtn(_ sender: Any) {
+        startFresh()
+    }
+    @IBOutlet weak var back: UIButton!
+    @IBAction func backBtn(_ sender: Any) {
+        print("working")
+        startView.removeFromSuperview()
+    }
+    @IBOutlet weak var highscore: UIButton!
     
     @IBAction func landOne(_ sender: Any) {
         let buttonOne = sender
@@ -53,20 +66,11 @@ class FlagViewController: UIViewController {
     }
     @IBOutlet weak var flagImage: UIImageView!
     
-    @IBAction func restartButton(_ sender: Any) {
-        points = 0
-        pointsLabel.text = "Points: \(points)"
-        flagCounter = -1
-        flagLabel.text = "Flags: \(flagCounter) / \(getFlags.totalFlags.count + 1)"
-        getFlags.buildArray()
-        config()
-//        startView.removeFromSuperview()
-    }
     @IBAction func menuButton(_ sender: Any) {
-//        startView.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
-        //        startView.layer.cornerRadius = screenHeight / 2
-        //        startView.layer.masksToBounds = true
-//        view.addSubview(startView)
+        startView.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
+//        startView.layer.cornerRadius = screenHeight / 4
+        startView.layer.masksToBounds = true
+        view.addSubview(startView)
         
         
     }
@@ -74,17 +78,24 @@ class FlagViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         getFlags.buildArray()
         config()
+        print(getFlags.readJSONFromFile(fileName: "countriesDict") as Any)
+
     }
     
     
     func config() {
-        newFlag((Any).self)
-        landOne.commonStyle()
-        landTwo.commonStyle()
-        landThre.commonStyle()
-        landFour.commonStyle()
+            newFlag((Any).self)
+            landOne.commonStyle()
+            landTwo.commonStyle()
+            landThre.commonStyle()
+            landFour.commonStyle()
+            restartBtn.commonStyle()
+            back.commonStyle()
+            highscore.commonStyle()
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(update), userInfo: nil, repeats: true)
         
     }
     
@@ -129,19 +140,14 @@ class FlagViewController: UIViewController {
             land3 = getFlags.buildFlagArray1(number: numberThree)
             print("Match!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
         }
-        
-        
-        print(land1, land2, land3, givenLand)
-        
         let fakeAnswer1 = getFlags.checkCountry(landCode: land1)
         fake1.setTitle(fakeAnswer1, for: .normal)
         let fakeAnswer2 = getFlags.checkCountry(landCode: land2)
         fake2.setTitle(fakeAnswer2, for:  .normal)
         let fakeAnswer3 = getFlags.checkCountry(landCode: land3)
         fake3.setTitle(fakeAnswer3, for:  .normal)
-        
-        
     }
+    
     
     func evaluate(button: UIButton) {
         if flagCounter <= getFlags.totalFlags.count {
@@ -220,6 +226,22 @@ class FlagViewController: UIViewController {
         pointsLabel.text = "All flags done"
     }
     
+    func startFresh() {
+        timer.invalidate()
+        points = 0
+        pointsLabel.text = "Points: \(points)"
+        flagCounter = 0
+        flagLabel.text = "Flags: \(flagCounter) / \(getFlags.totalFlags.count)"
+        getFlags.buildArray()
+        config()
+        startView.removeFromSuperview()
+        countdownLabelHome.text = "Time: \(time)"
+    }
+    
+    @objc func update() {
+        time += 1
+        countdownLabelHome.text = String(time)
+    }
     
 }
 
