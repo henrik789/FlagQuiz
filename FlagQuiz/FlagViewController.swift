@@ -19,6 +19,7 @@ class FlagViewController: UIViewController {
     var answer = String()
     var time = 0
     var timer = Timer()
+    var list = [Country]()
     
     @IBOutlet var startView: UIView!
     @IBOutlet weak var flagView: UIView!
@@ -81,8 +82,10 @@ class FlagViewController: UIViewController {
 
         getFlags.buildArray()
         config()
-        print(getFlags.readJSONFromFile(fileName: "countriesDict") as Any)
-
+        list = getFlags.readJSONFromFile()
+        for i in list {
+            print("Capital: \(i.capital) Land: \(i.name) Area: \(i.area)")
+        }
     }
     
     

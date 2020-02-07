@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		95A6E967069735CC35AC0AB7 /* Pods_FlagQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DF35329599C8A4D1FA2ABC /* Pods_FlagQuiz.framework */; };
-		AF32E70523BF420100532923 /* SnowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF32E70423BF420100532923 /* SnowView.swift */; };
 		AF59B08123BFE53D00B8A310 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF59B08023BFE53D00B8A310 /* UIButton.swift */; };
 		AF59B08323C28BB900B8A310 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF59B08223C28BB900B8A310 /* UIColor.swift */; };
 		AF66382823EAAD2500225A25 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF66382723EAAD2500225A25 /* SwiftyJSON.swift */; };
@@ -31,7 +30,6 @@
 /* Begin PBXFileReference section */
 		0D55A14A3136BD148ED3100B /* Pods-FlagQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlagQuiz.release.xcconfig"; path = "Target Support Files/Pods-FlagQuiz/Pods-FlagQuiz.release.xcconfig"; sourceTree = "<group>"; };
 		15DF35329599C8A4D1FA2ABC /* Pods_FlagQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlagQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF32E70423BF420100532923 /* SnowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowView.swift; sourceTree = "<group>"; };
 		AF3A380923B8AA71000BB091 /* Pixeled.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pixeled.ttf; sourceTree = "<group>"; };
 		AF3A380A23B8ACB9000BB091 /* Pinky Cat Demo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pinky Cat Demo.ttf"; sourceTree = "<group>"; };
 		AF59B08023BFE53D00B8A310 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 				AF73B33523AD351C006E0BDC /* AppDelegate.swift */,
 				AF73B33723AD351C006E0BDC /* ViewController.swift */,
 				AF8D026223CBBC970047C006 /* MenuViewController.swift */,
-				AF32E70423BF420100532923 /* SnowView.swift */,
 				AF8DCD3A23B8124D00AAE9B6 /* Countries */,
 				AFCB59F323B0B53800E69A14 /* FlagViewController.swift */,
 				AFBBA35323D0E03300ACEBB5 /* WebViewController.swift */,
@@ -255,7 +252,6 @@
 				AF66383023ECA99C00225A25 /* Country.swift in Sources */,
 				AF66382823EAAD2500225A25 /* SwiftyJSON.swift in Sources */,
 				AFBBA35423D0E03300ACEBB5 /* WebViewController.swift in Sources */,
-				AF32E70523BF420100532923 /* SnowView.swift in Sources */,
 				AF73B33623AD351C006E0BDC /* AppDelegate.swift in Sources */,
 				AF59B08123BFE53D00B8A310 /* UIButton.swift in Sources */,
 				AFBBA35223D0A43600ACEBB5 /* Timer.swift in Sources */,

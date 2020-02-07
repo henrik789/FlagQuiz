@@ -6,6 +6,7 @@ class GetFlags {
     
     var pictures = [String]()
     var totalFlags = [String]()
+    var countryList = [Country]()
     
     func buildArray() {
         let docPath = Bundle.main.resourcePath! + "/" + "Countries"
@@ -59,9 +60,9 @@ class GetFlags {
     
 //    let json = "{ \"people\": [{ \"firstName\": \"Paul\", \"lastName\": \"Hudson\", \"isAlive\": true }, { \"firstName\": \"Angela\", \"lastName\": \"Merkel\", \"isAlive\": true }, { \"firstName\": \"George\", \"lastName\": \"Washington\", \"isAlive\": false } ] }"
     
-        func readJSONFromFile(fileName: String) -> Any? {
-            var json: Any?
-            if let path = Bundle.main.path(forResource: fileName, ofType: "json") {
+        func readJSONFromFile() -> [Country] {
+//            var json: Any?
+            if let path = Bundle.main.path(forResource: "countriesDict", ofType: "json") {
                 do {
                     let fileUrl = URL(fileURLWithPath: path)
                     // Getting data from JSON file using the file URL
@@ -71,14 +72,14 @@ class GetFlags {
                     let personList = json[].map { (_, personJSON) in
                         return Country(json: personJSON)
                     }
-                    print(personList.count, personList[5].name)
-                    
+                    print(personList.count, personList[6].language, personList[6].currency, personList[6].longitude )
+                    countryList = personList
                     
                 } catch {
                     // Handle error here
                 }
             }
-            return json
+            return countryList
         }
     
     

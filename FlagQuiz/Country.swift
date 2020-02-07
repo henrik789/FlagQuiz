@@ -3,16 +3,17 @@ import UIKit
 
 struct Country {
     var name : String = ""
-//    var lastName : String = ""
-//    var yearOfBirth : Int = 1
-//    var parti : String = ""
-//    var urlLink : String = ""
-//    var gender : String = ""
-//    var status : String = ""
-//    var imageMax : String = ""
-//    var valkrets : String = ""
-//    var uppdrag : String = ""
-//    var uppgift : String = ""
+    var capital : String = ""
+    var region : String = ""
+    var subregion : String = ""
+    var population : String = ""
+    var area : String = ""
+    var language : String = ""
+    var flagUrl : String = ""
+    var latitude : String = ""
+    var longitude : String = ""
+    var currency : String = ""
+    var currencySymbol : String = ""
     
 //    func fullName () -> String {
 //        return "\(self.firstName) \(self.lastName)"
@@ -26,26 +27,21 @@ struct Country {
 }
 
 
-//struct Image {
-//    let image: UIImage = UIImage()
-//}
-
 extension Country {
     init(json: JSON) {
         let name = json["name"].stringValue
-//        let gender = json["kon"].stringValue
-//        let parti = json["parti"].stringValue
-//        let status = json["status"].stringValue
-//        let lastName = json["efternamn"].stringValue
-//        let imageMax = json["bild_url_max"].stringValue
-//        let yearOfBirth = json["fodd_ar"].intValue
-//        let urlLink = json["bild_url_192"].stringValue
-//        let valkrets = json["valkrets"].stringValue
-//        let uppdrag = json["personuppdrag"]["uppdrag"][0]["roll_kod"].stringValue
-//        let uppgift = json["personuppgift"]["uppgift"][0]["kod"].stringValue
+        let capital = json["capital"].stringValue
+        let region = json["region"].stringValue
+        let subregion = json["subregion"].stringValue
+        let population = json["population"].stringValue
+        let area = json["area"].stringValue
+        let language = json["languages"]["nativeName"].stringValue
+        let flagUrl = json["flag"].stringValue
+        let latitude = json["latlng"][0].stringValue
+        let longitude = json["latlng"][1].stringValue
+        let currency = json["currencies"][0]["name"].stringValue
+        let currencySymbol = json["currencies"][0]["symbol"].stringValue
         
-        self = Country(name: name)
+        self = Country(name: name, capital: capital, region: region, subregion: subregion, population: population, area: area, language: language, flagUrl: flagUrl, latitude: latitude, longitude: longitude, currency: currency, currencySymbol: currencySymbol)
     }
 }
-
-//, lastName: lastName, yearOfBirth: yearOfBirth, parti: parti, urlLink: urlLink, gender: gender, status: status, imageMax: imageMax, valkrets: valkrets, uppdrag: uppdrag, uppgift: uppgift
